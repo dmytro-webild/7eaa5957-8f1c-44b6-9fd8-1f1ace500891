@@ -1,52 +1,23 @@
 import type { Metadata } from "next";
-import { Halant } from "next/font/google";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ServiceWrapper } from "@/components/ServiceWrapper";
-import Tag from "@/tag/Tag";
 
-const halant = Halant({
-  variable: "--font-halant",  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",  subsets: ["latin"],
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "YC CLUB - Kimberley's Premium Wine Lounge | Fine Wines & Events",  description: "Discover YC CLUB, Kimberley's premier wine bar. Enjoy curated wines, elegant ambiance, private events & celebrations. Rated 5.0 ⭐ Call 074 717 0462 to book.",  keywords: "wine bar Kimberley, wine lounge Northern Cape, private events Kimberley, wine tasting, fine wines, celebration venue",  metadataBase: new URL("https://ycclub.co.za"),
-  alternates: {
-    canonical: "https://ycclub.co.za"},
-  openGraph: {
-    title: "YC CLUB - Kimberley's Premier Wine Lounge",    description: "Experience exceptional wines and elegant ambiance at Kimberley's most loved wine bar.",    url: "https://ycclub.co.za",    siteName: "YC CLUB",    type: "website",    images: [
-      {
-        url: "http://img.b2bpic.net/free-photo/black-wooden-table_417767-153.jpg",        alt: "YC CLUB Wine Lounge"},
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",    title: "YC CLUB - Kimberley's Premier Wine Lounge",    description: "Discover Kimberley's finest wine experience. 5.0 rated.",    images: ["http://img.b2bpic.net/free-photo/black-wooden-table_417767-153.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  title: "YC CLUB - Kimberley's Premier Wine Lounge",  description: "Experience exceptional wines in an elegantly curated space at Kimberley's premier wine lounge. Book your table today."};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <ServiceWrapper>
-        <body
-          className={`${halant.variable} ${inter.variable} antialiased`}
-        >
-          <Tag />
-          {children}
-        
+    <html lang="en">
+      <body className={poppins.className}>{children}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -1414,7 +1385,6 @@ export default function RootLayout({
           }}
         />
       </body>
-      </ServiceWrapper>
     </html>
   );
 }
