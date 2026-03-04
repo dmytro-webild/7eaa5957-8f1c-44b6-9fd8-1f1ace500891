@@ -19,7 +19,7 @@ export default function LandingPage() {
       borderRadius="soft"
       contentWidth="smallMedium"
       sizing="mediumLargeSizeMediumTitles"
-      background="floatingGradient"
+      background="circleGradient"
       cardStyle="gradient-mesh"
       primaryButtonStyle="diagonal-gradient"
       secondaryButtonStyle="solid"
@@ -45,7 +45,7 @@ export default function LandingPage() {
           tag="Premium Wine Experience"
           title="Kimberley's Premier Wine Lounge"
           description="Unwind. Connect. Celebrate. Experience exceptional wines in an elegantly curated space where every moment feels premium."
-          background={{ variant: "floatingGradient" }}
+          background={{ variant: "plain" }}
           imageSrc="http://img.b2bpic.net/free-photo/black-wooden-table_417767-153.jpg"
           imageAlt="YC CLUB wine lounge interior with ambient lighting"
           buttons={[
@@ -68,6 +68,7 @@ export default function LandingPage() {
           imageAlt="Curated wine collection at YC CLUB"
           useInvertedBackground={false}
           mediaAnimation="slide-up"
+          metricsAnimation="slide-up"
         />
       </div>
 
