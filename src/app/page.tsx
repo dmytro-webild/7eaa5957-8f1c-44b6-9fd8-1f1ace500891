@@ -9,7 +9,7 @@ import TestimonialCardOne from "@/components/sections/testimonial/TestimonialCar
 import SocialProofOne from "@/components/sections/socialProof/SocialProofOne";
 import ContactFaq from "@/components/sections/contact/ContactFaq";
 import FooterBase from "@/components/sections/footer/FooterBase";
-import { Phone } from "lucide-react";
+import { Phone, AlertCircle } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -42,16 +42,19 @@ export default function LandingPage() {
 
       <div id="hero" data-section="hero">
         <HeroBillboardScroll
-          tag="Premium Wine Experience"
+          tag="Limited Availability This Weekend"
+          tagIcon={AlertCircle}
+          tagAnimation="slide-up"
           title="Kimberley's Premier Wine Lounge"
           description="Unwind. Connect. Celebrate. Experience exceptional wines in an elegantly curated space where every moment feels premium."
           background={{ variant: "plain" }}
           imageSrc="http://img.b2bpic.net/free-photo/black-wooden-table_417767-153.jpg"
           imageAlt="YC CLUB wine lounge interior with ambient lighting"
           buttons={[
-            { text: "📞 Call Now", href: "tel:+27747170462" },
             { text: "📅 Book a Table", href: "#contact" },
+            { text: "📞 Call Now", href: "tel:+27747170462" },
           ]}
+          buttonAnimation="slide-up"
         />
       </div>
 
@@ -77,15 +80,9 @@ export default function LandingPage() {
           title="Why Choose YC CLUB"
           description="Discover what sets Kimberley's favourite wine bar apart"
           features={[
-            {
-              id: "1",              title: "Curated Wine Selection",              tags: ["Premium Selection", "Expert Curation"],
-              imageSrc: "http://img.b2bpic.net/free-photo/business-people-together-communication-concept_53876-138106.jpg",              imageAlt: "Fine wine tasting experience"},
-            {
-              id: "2",              title: "Private Event Spaces",              tags: ["Birthdays", "Celebrations"],
-              imageSrc: "http://img.b2bpic.net/free-photo/knocking-glasses-with-wine-group-friends-elegant-wear-have-luxury-dinner_146671-14449.jpg",              imageAlt: "Private gathering space"},
-            {
-              id: "3",              title: "Relaxed Lounge Atmosphere",              tags: ["Comfort", "Ambiance"],
-              imageSrc: "http://img.b2bpic.net/free-photo/fashion-portrait-african-american-woman-long-dress-boots-sunglasses-indoor_627829-5495.jpg",              imageAlt: "Comfortable lounge seating"},
+            {id: "1", title: "Curated Wine Selection", tags: ["Premium Selection", "Expert Curation"], imageSrc: "http://img.b2bpic.net/free-photo/business-people-together-communication-concept_53876-138106.jpg", imageAlt: "Fine wine tasting experience"},
+            {id: "2", title: "Private Event Spaces", tags: ["Birthdays", "Celebrations"], imageSrc: "http://img.b2bpic.net/free-photo/knocking-glasses-with-wine-group-friends-elegant-wear-have-luxury-dinner_146671-14449.jpg", imageAlt: "Private gathering space"},
+            {id: "3", title: "Relaxed Lounge Atmosphere", tags: ["Comfort", "Ambiance"], imageSrc: "http://img.b2bpic.net/free-photo/fashion-portrait-african-american-woman-long-dress-boots-sunglasses-indoor_627829-5495.jpg", imageAlt: "Comfortable lounge seating"},
           ]}
           animationType="slide-up"
           textboxLayout="default"
@@ -98,18 +95,10 @@ export default function LandingPage() {
           title="Loved by Locals"
           description="Hear from our happy customers who've made YC CLUB their favourite spot"
           testimonials={[
-            {
-              id: "1",              name: "Sarah Johnson",              role: "Professional",              company: "Kimberley Local",              rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/smiling-african-american-man-posing-library_74855-1619.jpg",              imageAlt: "Sarah Johnson"},
-            {
-              id: "2",              name: "Emma Chen",              role: "Event Planner",              company: "Celebrate Events",              rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/happy-business-woman-white-shirt_23-2148095748.jpg",              imageAlt: "Emma Chen"},
-            {
-              id: "3",              name: "Michael Peters",              role: "Restaurant Owner",              company: "Local Business",              rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/smiling-man-sitting-cafe-table-gesturing_1262-1141.jpg",              imageAlt: "Michael Peters"},
-            {
-              id: "4",              name: "David & Lisa Brown",              role: "Couple",              company: "Regular Guests",              rating: 5,
-              imageSrc: "http://img.b2bpic.net/free-photo/happy-couple-posing_23-2147644354.jpg",              imageAlt: "David and Lisa Brown"},
+            {id: "1", name: "Sarah Johnson", role: "Professional", company: "Kimberley Local", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/smiling-african-american-man-posing-library_74855-1619.jpg", imageAlt: "Sarah Johnson"},
+            {id: "2", name: "Emma Chen", role: "Event Planner", company: "Celebrate Events", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/happy-business-woman-white-shirt_23-2148095748.jpg", imageAlt: "Emma Chen"},
+            {id: "3", name: "Michael Peters", role: "Restaurant Owner", company: "Local Business", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/smiling-man-sitting-cafe-table-gesturing_1262-1141.jpg", imageAlt: "Michael Peters"},
+            {id: "4", name: "David & Lisa Brown", role: "Couple", company: "Regular Guests", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/happy-couple-posing_23-2147644354.jpg", imageAlt: "David and Lisa Brown"},
           ]}
           gridVariant="uniform-all-items-equal"
           animationType="slide-up"
@@ -123,7 +112,7 @@ export default function LandingPage() {
           title="Trusted by Community Partners"
           description="Recognized and endorsed by local and regional hospitality leaders"
           names={[
-            "Wine Lovers Club",            "Local Hospitality Association",            "Kimberley Tourism Board",            "Event Professionals Network",            "Regional Sommelier Guild",            "Vintners Collective",            "Local Business Council"]}
+            "Wine Lovers Club", "Local Hospitality Association", "Kimberley Tourism Board", "Event Professionals Network", "Regional Sommelier Guild", "Vintners Collective", "Local Business Council"]}
           textboxLayout="default"
           useInvertedBackground={false}
           speed={40}
@@ -138,18 +127,12 @@ export default function LandingPage() {
           ctaButton={{ text: "Call 074 717 0462", href: "tel:+27747170462" }}
           ctaIcon={Phone}
           faqs={[
-            {
-              id: "1",              title: "What are your opening hours?",              content: "We're open Tuesday through Sunday, from 5 PM to late evening. Closed Mondays. Special events and private bookings available by appointment."},
-            {
-              id: "2",              title: "Do you host private events?",              content: "Yes! We offer intimate private spaces perfect for birthdays, corporate gatherings, and special celebrations. Contact us to discuss your event requirements and secure your preferred date."},
-            {
-              id: "3",              title: "Can I book a table in advance?",              content: "Absolutely. We recommend booking ahead, especially for weekends and larger groups. Call us at 074 717 0462 or fill out our booking form to reserve your spot."},
-            {
-              id: "4",              title: "What makes your wine selection special?",              content: "Our curated collection features premium local and international wines, carefully selected by our expert team. We focus on quality, uniqueness, and taste profiles that appeal to both enthusiasts and newcomers."},
-            {
-              id: "5",              title: "Are you suitable for business meetings?",              content: "Definitely! Our relaxed yet professional atmosphere makes us ideal for business discussions, client entertaining, and professional networking in a sophisticated setting."},
-            {
-              id: "6",              title: "What's your location exactly?",              content: "We're located in central Kimberley, Northern Cape (8301). Check our Google Maps location for directions or call us for detailed travel instructions."},
+            {id: "1", title: "What are your opening hours?", content: "We're open Tuesday through Sunday, from 5 PM to late evening. Closed Mondays. Special events and private bookings available by appointment."},
+            {id: "2", title: "Do you host private events?", content: "Yes! We offer intimate private spaces perfect for birthdays, corporate gatherings, and special celebrations. Contact us to discuss your event requirements and secure your preferred date."},
+            {id: "3", title: "Can I book a table in advance?", content: "Absolutely. We recommend booking ahead, especially for weekends and larger groups. Call us at 074 717 0462 or fill out our booking form to reserve your spot."},
+            {id: "4", title: "What makes your wine selection special?", content: "Our curated collection features premium local and international wines, carefully selected by our expert team. We focus on quality, uniqueness, and taste profiles that appeal to both enthusiasts and newcomers."},
+            {id: "5", title: "Are you suitable for business meetings?", content: "Definitely! Our relaxed yet professional atmosphere makes us ideal for business discussions, client entertaining, and professional networking in a sophisticated setting."},
+            {id: "6", title: "What's your location exactly?", content: "We're located in central Kimberley, Northern Cape (8301). Check our Google Maps location for directions or call us for detailed travel instructions."},
           ]}
           useInvertedBackground={false}
           animationType="slide-up"
@@ -162,7 +145,7 @@ export default function LandingPage() {
           copyrightText="© 2025 YC CLUB Wine Lounge. All rights reserved."
           columns={[
             {
-              title: "Navigate",              items: [
+              title: "Navigate", items: [
                 { label: "Home", href: "hero" },
                 { label: "About", href: "about" },
                 { label: "Experiences", href: "features" },
@@ -170,7 +153,7 @@ export default function LandingPage() {
               ],
             },
             {
-              title: "Connect",              items: [
+              title: "Connect", items: [
                 { label: "Call Us", href: "tel:+27747170462" },
                 { label: "Book a Table", href: "#contact" },
                 { label: "Private Events", href: "#contact" },
@@ -178,7 +161,7 @@ export default function LandingPage() {
               ],
             },
             {
-              title: "Location",              items: [
+              title: "Location", items: [
                 { label: "Kimberley, Northern Cape", href: "#" },
                 { label: "South Africa 8301", href: "#" },
                 { label: "Google Maps", href: "https://maps.google.com" },
